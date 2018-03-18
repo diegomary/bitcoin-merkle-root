@@ -1,0 +1,13 @@
+{
+  "name": "bitcoin-merkle-root",
+  "version": "1.0.0",
+  "description": "A way to calculate the Bitcoin Merkel root hash given an array of transaction ids",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Diego Aldo Burlando",
+  "website": "https://diegomary.github.io",
+  "license": "ISC"
+}
