@@ -1,13 +1,16 @@
-bitcoin-merkle-root
-===================
+bitcoin-merkle-root 
+====================
 
 npm install bitcoin-merkle-root
 
+The algorithm doesn’t use recursion anymore so there shouldn’t be any stack
+overflow for big sets of transactions hashes
+
  
 
-`let merkel = require("bitcoin-merkle-root");`
+`let merkle = require("bitcoin-merkle-root");`
 
-`console.log(merkel.BitcoinMerkleRoot(tx))`
+`console.log(merkle.BitcoinMerkleRoot(tx))`
 
 where tx is an array of bitcoin transactions.
 
@@ -64,7 +67,7 @@ Merkle Root: a17a4959eacfae4f3e06c4129c87e627ce6fe93987e78b66999a38e684c6fed5
 
 If we use the utility we can write:
 
-`console.log(merkel.BitcoinMerkleRoot(tx))`;
+`console.log(merkle.BitcoinMerkleRoot(tx))`;
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 output: 

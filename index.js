@@ -6,12 +6,15 @@ exports.help = () => {
 }
 
 let btm_recursive = (hashList) => {
-  if (hashList.length === 1) return hashList[0];
-  let newHashList = [];
-  let len = (hashList.length % 2 !== 0) ? hashList.length -1 : hashList.length;
-  for(let i = 0; i < len; i += 2 ) newHashList.push(hash2(hashList[i], hashList[i+1]));
-  if(len < hashList.length)  newHashList.push(hash2(hashList[hashList.length-1], hashList[hashList.length-1]));
-  return btm_recursive(newHashList);
+  while(true)
+  {
+    if (hashList.length === 1) return hashList[0];
+    let newHashList = [];
+    let len = (hashList.length % 2 !== 0) ? hashList.length -1 : hashList.length;
+    for(let i = 0; i < len; i += 2 ) newHashList.push(hash2(hashList[i], hashList[i+1]));
+    if(len < hashList.length)  newHashList.push(hash2(hashList[hashList.length-1], hashList[hashList.length-1]));  
+    hashList = newHashList;
+  }
 }
 
 function hash2 (a,b) { 

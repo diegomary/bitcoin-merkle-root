@@ -1,6 +1,6 @@
 {
   "name": "bitcoin-merkle-root",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A way to calculate the Bitcoin Merkel root hash given an array of transaction ids",
   "main": "index.js",
   "scripts": {
